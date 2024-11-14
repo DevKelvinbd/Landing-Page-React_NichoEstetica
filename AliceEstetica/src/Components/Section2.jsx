@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import Img from '../assets/images/women.png'
-import Img2 from '../assets/images/women2.png'
+import Flower from '../assets/images/iconFlower.svg'
 import Button from '../assets/Atoms/Button';
 
 // Breakpoints padrão recomendados para React
@@ -13,6 +12,7 @@ const breakpoints = {
 };
 
 //   @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
+
 
 //   }
 
@@ -39,29 +39,28 @@ const breakpoints = {
 
 const Container = styled.div`
     display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
+    justify-content: center;
     align-items: center;
+    flex-direction: row;
+    padding: 2rem 0;
     width: 100%;
-    height: 60vh;
+    height: auto;
     background-color: #EFDBDB;
     position: relative; /* Para o posicionamento absoluto da imagem */
-    gap: 20px;
-
-    @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
-        
-    }
 
     /* Small devices (small tablets and large phones, 598px and 962px) */
     @media (min-width: ${breakpoints.sm}) and (max-width: ${breakpoints.md}) {
-        height: 80vh;
+        height: 100vh;
+        width: 100%;
+        justify-content: flex-start;
+
     }
 
     /* Medium devices (tablets, 960px and up) */
     @media (min-width: ${breakpoints.md}) and (max-width: ${breakpoints.lg}) {
-        height: 100vh;
+        height: auto;
     }
-
+    
     /* Large devices (desktops, 1280px and up) */
     @media (min-width: ${breakpoints.lg}) and (max-width: ${breakpoints.xl}) {
         height: 100vh;
@@ -72,35 +71,40 @@ const Container = styled.div`
 const ContentText = styled.div`
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    width: 75%;
+    align-items: center;
+    width: 90%;
     height: 100%;
     flex-direction: column;
-    padding-left: 1rem;
-    position: relative;
-    z-index: 1; /* Conteúdo principal abaixo da Overlay */
+    text-align: center;
 
     @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
-        width: 70%;
-        padding-left: 5vw;
+        width: 100%;
+        padding: 2rem 1rem; 
+        flex-direction: column;
     }
 
     /* Small devices (small tablets and large phones, 598px and 962px) */
     @media (min-width: ${breakpoints.sm}) and (max-width: ${breakpoints.md}) {
-        width: 50%;
-        padding-left: 10vw;
+        width: 100%;
+        padding: 2rem 10%;
+        align-items: flex-start;
+        text-align: left;
     }
 
     /* Medium devices (tablets, 960px and up) */
     @media (min-width: ${breakpoints.md}) and (max-width: ${breakpoints.lg}) {
-        width: 60%;
-        padding-left: 10%;
+        width: 100%;
+        padding: 2rem 10%;
+        align-items: flex-start;
+        text-align: left;
     }
 
     /* Large devices (desktops, 1280px and up) */
     @media (min-width: ${breakpoints.lg}) and (max-width: ${breakpoints.xl}) {
-        width: 60%;
-        padding-left: 10%;
+        width: 100%;
+        padding: 2rem 10%;
+        align-items: flex-start;
+        text-align: left;
     }
 `
 
@@ -113,9 +117,10 @@ const Title = styled.h1`
     @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
         height: auto;
         width: auto;
-        padding: 0 1rem 0 0;
-        font-size: clamp(35px, 8vw, 48px);
-        margin-bottom: 0.7rem;
+        right: -7%;
+        padding: 0;
+        font-size: clamp(38px, 6vw, 48px);
+        margin-bottom: 0;
         line-height: 0.9;
     }
 
@@ -123,9 +128,10 @@ const Title = styled.h1`
     @media (min-width: ${breakpoints.sm}) and (max-width: ${breakpoints.md}) {
         height: auto;
         width: auto;
+        right: -7%;
         padding: 0 1rem 0 0;
         font-size: clamp(45px, 15vw, 6vw);
-        margin-bottom: 0rem;
+        margin-bottom: 0.7rem;
         line-height: 0.9;
     }
 
@@ -134,8 +140,8 @@ const Title = styled.h1`
         height: auto;
         width: auto;
         padding: 0 1rem 0 0;
-        font-size: clamp(45px, 15vw, 6vw);
-        margin-bottom: 0rem;
+        font-size: clamp(45px, 15vw, 5vw);
+        margin-bottom: 0.7rem;
         line-height: 0.9;
     }
 
@@ -144,8 +150,8 @@ const Title = styled.h1`
         height: auto;
         width: auto;
         padding: 0 1rem 0 0;
-        font-size: clamp(45px, 15vw, 6vw);
-        margin-bottom: 0rem;
+        font-size: clamp(45px, 15vw, 4.5vw);
+        margin-bottom: 0.7rem;
         line-height: 0.9;
     }
 
@@ -153,17 +159,18 @@ const Title = styled.h1`
 
 const Paragraph = styled.p`
     color: #96485C;
-    text-align: left;
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
+    text-align: center;
     margin-top: 0.5rem;
+    font-family: 'Poppins', sans-serif;
     line-height: 1.1; /* Ajuste para o valor desejado */
+    font-size: 1.3rem;
     
     @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
         height: auto;
         width: auto;
-        font-size: 1rem;
-        padding: 0 1.5rem 0 0;
+        font-size: 1.1rem;
+        padding: 0;
+        margin-top: 0.5rem;
         line-height: 0.9;
     }
 
@@ -171,6 +178,7 @@ const Paragraph = styled.p`
     @media (min-width: ${breakpoints.sm}) and (max-width: ${breakpoints.md}) {
         height: auto;
         width: auto;
+        text-align: left;
         padding: 0 1rem 0 0;
         font-size: clamp(18px, 10vw, 2vw);
         margin-bottom: 0.7rem;
@@ -181,7 +189,7 @@ const Paragraph = styled.p`
     @media (min-width: ${breakpoints.md}) and (max-width: ${breakpoints.lg}) {
         height: auto;
         width: auto;
-        right: -7%;
+        text-align: left;
         padding: 0 1rem 0 0;
         font-size: clamp(18px, 10vw, 2vw);
         margin-bottom: 0.7rem;
@@ -192,92 +200,173 @@ const Paragraph = styled.p`
     @media (min-width: ${breakpoints.lg}) and (max-width: ${breakpoints.xl}) {
         height: auto;
         width: auto;
-        right: -7%;
-        padding: 0 1rem 0 0;
-        font-size: clamp(18px, 10vw, 2vw);
+        text-align: left;
+        padding: 0 6rem 0 0;
+        font-size: clamp(18px, 10vw, 1.5vw);
         margin-bottom: 0.7rem;
         line-height: 0.9;
     }
 `
 
-const ImagemS1 = styled.img`
-    position: absolute;
-    right: -12%; /* Mova a imagem 10% para fora da tela à direita */
-    bottom: 0;
-    width: 50%;
+const Caract = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: auto;
     height: auto;
-
+    gap: 7px;
+    
     @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
-        max-height: 90%;
-        width: auto;
-        right: -2vw;
+        flex-direction: column;
     }
 
     /* Small devices (small tablets and large phones, 598px and 962px) */
     @media (min-width: ${breakpoints.sm}) and (max-width: ${breakpoints.md}) {
-        display: none;
-        max-height: 90%;
-        width: auto;
-        right: 0;
+        align-items: flex-start;
     }
 
     /* Medium devices (tablets, 960px and up) */
     @media (min-width: ${breakpoints.md}) and (max-width: ${breakpoints.lg}) {
-        display: none;
-    }
-
-        /* Large devices (desktops, 1280px and up) */
-    @media (min-width: ${breakpoints.lg}) and (max-width: ${breakpoints.xl}) {
-        display: none;
-    }
-`
-
-const Imagem2S1 = styled.img`
-    display: none;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 50%;
-    height: auto;
-
-    @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
-
-    }
-
-    /* Small devices (small tablets and large phones, 598px and 962px) */
-    @media (min-width: ${breakpoints.sm}) and (max-width: ${breakpoints.md}) {
-        display: flex;
-        max-height: 90%;
-        width: auto;
-    }
-
-    /* Medium devices (tablets, 960px and up) */
-    @media (min-width: ${breakpoints.md}) and (max-width: ${breakpoints.lg}) {
-        display: flex;
-        max-height: 90%;
-        width: auto;
+        align-items: flex-start;
     }
 
     /* Large devices (desktops, 1280px and up) */
     @media (min-width: ${breakpoints.lg}) and (max-width: ${breakpoints.xl}) {
-        display: flex;
-        max-height: 90%;
-        width: auto;
+        align-items: flex-start;
     }
 `
 
-const Section1 = () => {
+const ImgCaract = styled.img`
+    width: 2.2rem;
+    margin-bottom: 0rem; 
+`
+
+const TitleCaract = styled.h1`
+    font-family: 'Kalnia';
+    color: #BC6366;
+    margin: 0;
+`
+
+const ParCaract = styled.p`
+    color: #96485C;
+    text-align: center;
+    margin-top: 0.2rem;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.1; /* Ajuste para o valor desejado */
+    font-size: 1.1rem;
+
+    /* Small devices (small tablets and large phones, 598px and 962px) */
+    @media (min-width: ${breakpoints.sm}) and (max-width: ${breakpoints.md}) {
+        text-align: left;
+    }
+
+    /* Medium devices (tablets, 960px and up) */
+    @media (min-width: ${breakpoints.md}) and (max-width: ${breakpoints.lg}) {
+        text-align: left;
+    }
+
+    /* Large devices (desktops, 1280px and up) */
+    @media (min-width: ${breakpoints.lg}) and (max-width: ${breakpoints.xl}) {
+        text-align: left;
+    }
+`
+
+const BrQl = styled.br`
+
+`
+
+const Block = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.40rem;
+
+    /* Small devices (small tablets and large phones, 598px and 962px) */
+    @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
+        flex-direction: column;
+    }
+
+    /* Small devices (small tablets and large phones, 598px and 962px) */
+    @media (min-width: ${breakpoints.sm}) and (max-width: ${breakpoints.md}) {
+        flex-direction: row;
+    }
+
+    /* Medium devices (tablets, 960px and up) */
+    @media (min-width: ${breakpoints.md}) and (max-width: ${breakpoints.lg}) {
+        flex-direction: row;
+    }
+
+    /* Large devices (desktops, 1280px and up) */
+    @media (min-width: ${breakpoints.lg}) and (max-width: ${breakpoints.xl}) {
+        flex-direction: row;
+    }
+
+
+
+` 
+const ContainerCaract = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* Small devices (small tablets and large phones, 598px and 962px) */
+    @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
+        flex-direction: column;
+    }
+    
+    /* Small devices (small tablets and large phones, 598px and 962px) */
+    @media (min-width: ${breakpoints.sm}) and (max-width: ${breakpoints.md}) {
+        flex-direction: row;
+    }
+
+    /* Medium devices (tablets, 960px and up) */
+    @media (min-width: ${breakpoints.md}) and (max-width: ${breakpoints.lg}) {
+        flex-direction: row;
+    }
+
+    /* Large devices (desktops, 1280px and up) */
+    @media (min-width: ${breakpoints.lg}) and (max-width: ${breakpoints.xl}) {
+        flex-direction: row;
+    }
+
+
+`
+
+const Section2 = () => {
   return (
     <Container>
         <ContentText>
-            <Title>Sua beleza,<br /> Nossa paixão</Title>
-            <Paragraph>Realce sua beleza com cuidados personalizados que valorizam cada detalhe do seu bem-estar.</Paragraph>
-            <Button text="Marque sua consulta" />
+            <Title>A Experiência<BrQl />Estética da Alice</Title>
+            <Paragraph>Entre em um espaço onde seu bem-estar e o cuidado com sua pele são prioridade, com atendimento feito sob medida.</Paragraph>
+            
+            <Caract>
+                <Block style={{marginTop: "1.5rem"}}>
+                    <ImgCaract src={Flower} alt=""  />
+                    <TitleCaract>Naturalidade</TitleCaract>
+                </Block>
+                <ParCaract>Realçamos a sua beleza natural, para que você se sinta única e confiante em cada detalhe.</ParCaract>
+
+                <Block>
+                    <ImgCaract src={Flower} alt="" />
+                    <TitleCaract>Harmonia</TitleCaract>
+                </Block>
+                <ParCaract>Cada tratamento é pensado para trazer equilíbrio e realçar o que há de melhor em você.</ParCaract>
+
+                <ContainerCaract>
+                    <ImgCaract style={{marginRight: "0.3rem"}} src={Flower} alt="" />
+                    <Block>
+                        <TitleCaract>Cuidado Especializado</TitleCaract>
+                    </Block>
+                </ContainerCaract>
+                    <ParCaract>Com técnicas avançadas e um olhar atento, nosso compromisso é com sua satisfação e autoestima.</ParCaract>
+            </Caract>
+            <Button width="50%" text="Faça seu agendamento" />
         </ContentText>
-        <ImagemS1 src={Img} alt="" />
-        <Imagem2S1 src={Img2} alt="" />
+
     </Container>
   )
 }
 
-export default Section1
+export default Section2
