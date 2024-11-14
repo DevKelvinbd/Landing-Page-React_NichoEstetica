@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 const But = styled.button`
-    width: 75%;
+    width: ${(props) => props.width || '75%'};
     border: none;
     font-family: 'Poppins', sans-serif;
     margin-top: 0.8rem;
@@ -12,9 +12,9 @@ const But = styled.button`
     font-size: 2.3vh;
 `
 
-const Button = ({text}) => {
+const Button = ({text, width}) => {
   return (
-    <But>{text}</But>
+    <But width={width}>{text}</But>
   )
 }
 
