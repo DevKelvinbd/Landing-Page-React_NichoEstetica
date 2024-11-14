@@ -62,9 +62,9 @@ const Section1 = () => {
   return (
     <Container>
         <ContentText>
-                <Title>Sua beleza,<br /> Nossa paixão</Title>
-                <Paragraph>Realce sua beleza com cuidados personalizados que valorizam cada detalhe do seu bem-estar.</Paragraph>
-                <Button>Marque sua consulta</Button>
+            <Title>Sua beleza,<br /> Nossa paixão</Title>
+            <Paragraph>Realce sua beleza com cuidados personalizados que valorizam cada detalhe do seu bem-estar.</Paragraph>
+            <Button>Marque sua consulta</Button>
         </ContentText>
             <ImagemS1 src={Img} alt="" />
     </Container>
