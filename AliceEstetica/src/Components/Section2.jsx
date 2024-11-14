@@ -63,7 +63,7 @@ const Container = styled.div`
     
     /* Large devices (desktops, 1280px and up) */
     @media (min-width: ${breakpoints.lg}) and (max-width: ${breakpoints.xl}) {
-        height: auto;
+        height: 100vh;
     }
 
 `
@@ -79,14 +79,14 @@ const ContentText = styled.div`
 
     @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
         width: 100%;
-        padding: 0 1rem; 
+        padding: 2rem 1rem; 
         flex-direction: column;
     }
 
     /* Small devices (small tablets and large phones, 598px and 962px) */
     @media (min-width: ${breakpoints.sm}) and (max-width: ${breakpoints.md}) {
         width: 100%;
-        padding: 0 10%;
+        padding: 2rem 10%;
         align-items: flex-start;
         text-align: left;
     }
@@ -94,7 +94,7 @@ const ContentText = styled.div`
     /* Medium devices (tablets, 960px and up) */
     @media (min-width: ${breakpoints.md}) and (max-width: ${breakpoints.lg}) {
         width: 100%;
-        padding: 0 10%;
+        padding: 2rem 10%;
         align-items: flex-start;
         text-align: left;
     }
@@ -102,7 +102,7 @@ const ContentText = styled.div`
     /* Large devices (desktops, 1280px and up) */
     @media (min-width: ${breakpoints.lg}) and (max-width: ${breakpoints.xl}) {
         width: 100%;
-        padding: 0 10%;
+        padding: 2rem 10%;
         align-items: flex-start;
         text-align: left;
     }
@@ -140,7 +140,7 @@ const Title = styled.h1`
         height: auto;
         width: auto;
         padding: 0 1rem 0 0;
-        font-size: clamp(45px, 15vw, 6vw);
+        font-size: clamp(45px, 15vw, 5vw);
         margin-bottom: 0.7rem;
         line-height: 0.9;
     }
@@ -168,8 +168,7 @@ const Paragraph = styled.p`
     @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
         height: auto;
         width: auto;
-        right: -7%;
-        font-size: 1rem;
+        font-size: 1.1rem;
         padding: 0;
         margin-top: 0.5rem;
         line-height: 0.9;
@@ -356,7 +355,7 @@ const Section2 = () => {
                 <ParCaract>Cada tratamento é pensado para trazer equilíbrio e realçar o que há de melhor em você.</ParCaract>
 
                 <ContainerCaract>
-                    <ImgCaract src={Flower} alt="" />
+                    <ImgCaract style={{marginRight: "0.3rem"}} src={Flower} alt="" />
                     <Block>
                         <TitleCaract>Cuidado Especializado</TitleCaract>
                     </Block>
