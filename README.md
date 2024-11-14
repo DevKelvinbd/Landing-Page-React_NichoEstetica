@@ -1,4 +1,4 @@
-# Alice Barros - Estética e Bem-Estar
+# Landing Page - Estética e Bem-Estar
 
 Bem-vindo ao repositório do site oficial de **Alice Barros**, especialista em estética e bem-estar. Este projeto é uma página de apresentação (SPA/Landing Page) desenvolvida para destacar os tratamentos personalizados e o compromisso de Alice em realçar a beleza e autoestima de seus clientes.
 
