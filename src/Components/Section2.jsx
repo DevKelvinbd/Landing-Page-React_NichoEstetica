@@ -355,7 +355,7 @@ const Section2 = () => {
                 <ParCaract>Cada tratamento é pensado para trazer equilíbrio e realçar o que há de melhor em você.</ParCaract>
 
                 <ContainerCaract>
-                    <ImgCaract style={{marginRight: "0.3rem"}} src={Flower} alt="" />
+                    <ImgCaract style={{marginRight: "0.3rem", marginBottom: "0.3rem"}} src={Flower} alt="" />
                     <Block>
                         <TitleCaract>Cuidado Especializado</TitleCaract>
                     </Block>
