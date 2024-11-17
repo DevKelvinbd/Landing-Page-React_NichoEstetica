@@ -87,24 +87,23 @@ const ContentText = styled.div`
     @media (min-width: ${breakpoints.sm}) and (max-width: ${breakpoints.md}) {
         width: 100%;
         padding: 2rem 10%;
-        align-items: flex-start;
-        text-align: left;
+         text-align: center;
+
     }
 
     /* Medium devices (tablets, 960px and up) */
     @media (min-width: ${breakpoints.md}) and (max-width: ${breakpoints.lg}) {
         width: 100%;
         padding: 2rem 10%;
-        align-items: flex-start;
-        text-align: left;
+         text-align: center;
     }
 
     /* Large devices (desktops, 1280px and up) */
     @media (min-width: ${breakpoints.lg}) and (max-width: ${breakpoints.xl}) {
         width: 100%;
         padding: 2rem 10%;
-        align-items: flex-start;
-        text-align: left;
+         text-align: center;
+
     }
 `
 
@@ -177,7 +176,7 @@ const Paragraph = styled.p`
     @media (min-width: ${breakpoints.sm}) and (max-width: ${breakpoints.md}) {
         height: auto;
         width: auto;
-        text-align: left;
+        text-align: center;
         padding: 0 1rem 0 0;
         font-size: clamp(18px, 10vw, 2vw);
         margin-bottom: 0.7rem;
@@ -188,7 +187,7 @@ const Paragraph = styled.p`
     @media (min-width: ${breakpoints.md}) and (max-width: ${breakpoints.lg}) {
         height: auto;
         width: auto;
-        text-align: left;
+        text-align: center;
         padding: 0 1rem 0 0;
         font-size: clamp(18px, 10vw, 2vw);
         margin-bottom: 0.7rem;
@@ -199,7 +198,7 @@ const Paragraph = styled.p`
     @media (min-width: ${breakpoints.lg}) and (max-width: ${breakpoints.xl}) {
         height: auto;
         width: auto;
-        text-align: left;
+        text-align: center;
         padding: 0 6rem 0 0;
         font-size: clamp(18px, 10vw, 1.5vw);
         margin-bottom: 0.7rem;
@@ -333,48 +332,18 @@ const ContainerCaract = styled.div`
 
 `
 
-const Section2 = () => {
+const Section5 = () => {
   return (
     <Container>
         <ContentText>
-            <Title>A Experiência<BrQl />Estética da Alice</Title>
-            <Paragraph>Entre em um espaço onde seu bem-estar e o cuidado com sua pele são prioridade, com atendimento feito sob medida.</Paragraph>
+          <Paragraph style={{margin: "0", padding:"0"}}>Depoimentos</Paragraph>
+          <Title style={{padding: "0"}}>O que nossos<BrQl/>pacientes dizem?</Title>
             
-            <Caract>
-                <Block style={{marginTop: "1.5rem"}}>
-                    <ImgCaract src={Flower} alt=""  />
-                    <TitleCaract>Naturalidade</TitleCaract>
-                </Block>
-                <ParCaract>Realçamos a sua beleza natural, para que você se sinta única e confiante em cada detalhe.</ParCaract>
-
-                <Block>
-                    <ImgCaract src={Flower} alt="" />
-                    <TitleCaract>Harmonia</TitleCaract>
-                </Block>
-                <ParCaract>Cada tratamento é pensado para trazer equilíbrio e realçar o que há de melhor em você.</ParCaract>
-
-                <ContainerCaract>
-                    <ImgCaract style={{marginRight: "0.3rem", marginBottom: "0.3rem"}} src={Flower} alt="" />
-                    <Block>
-                        <TitleCaract>Cuidado Especializado</TitleCaract>
-                    </Block>
-                </ContainerCaract>
-                    <ParCaract>Com técnicas avançadas e um olhar atento, nosso compromisso é com sua satisfação e autoestima.</ParCaract>
-            </Caract>
-            <Button
-                width="50%"
-                text="Faça seu agendamento"
-                onClick={() =>
-                    window.open(
-                        'https://wa.me/558898153111?text=Ol%C3%A1%20Alice!%20Gostaria%20de%20conhecer%20o%20seu%20trabalho.',
-                        '_blank'
-                    )
-                }
-            />
+           
         </ContentText>
 
     </Container>
   )
 }
 
-export default Section2
+export default Section5

@@ -271,8 +271,17 @@ const Section1 = () => {
     <Container>
         <ContentText>
             <Title>Sua beleza,<br /> Nossa paixão</Title>
-            <Paragraph>Realce sua beleza com cuidados personalizados que valorizam cada detalhe do seu bem-estar.</Paragraph>
-            <Button text="Marque sua consulta" />
+            <Paragraph style={{marginBottom: "1rem"}}>Realce sua beleza com cuidados personalizados que valorizam cada detalhe do seu bem-estar.</Paragraph>
+            <Button
+                text="Marque sua consulta"
+                width="65%"
+                onClick={() =>
+                    window.open(
+                        'https://wa.me/558898153111?text=Ol%C3%A1%20Alice!%20Gostaria%20de%20conhecer%20o%20seu%20trabalho.',
+                        '_blank'
+                    )
+                }
+            />
         </ContentText>
         <ImagemS1 src={Img} alt="" />
         <Imagem2S1 src={Img2} alt="" />

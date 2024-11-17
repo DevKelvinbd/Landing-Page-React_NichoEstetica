@@ -1,6 +1,7 @@
 import './App.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import EsteticaAlice from './Pages/EsteticaAlice/EsteticaAlice';
+import 'antd/dist/reset.css';
 
 const router = createBrowserRouter([
   {
