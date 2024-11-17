@@ -154,7 +154,6 @@ const Title = styled.h1`
         margin-bottom: 0.7rem;
         line-height: 0.9;
     }
-
 `
 
 const Paragraph = styled.p`
@@ -362,7 +361,16 @@ const Section2 = () => {
                 </ContainerCaract>
                     <ParCaract>Com técnicas avançadas e um olhar atento, nosso compromisso é com sua satisfação e autoestima.</ParCaract>
             </Caract>
-            <Button width="50%" text="Faça seu agendamento" />
+            <Button
+                width="50%"
+                text="Faça seu agendamento"
+                onClick={() =>
+                    window.open(
+                        'https://wa.me/558898153111?text=Ol%C3%A1%20Alice!%20Gostaria%20de%20conhecer%20o%20seu%20trabalho.',
+                        '_blank'
+                    )
+                }
+            />
         </ContentText>
 
     </Container>

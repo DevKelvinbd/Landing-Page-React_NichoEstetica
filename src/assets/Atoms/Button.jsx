@@ -1,10 +1,10 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 const But = styled.button`
     width: ${(props) => props.width || '75%'};
     border: none;
     font-family: 'Poppins', sans-serif;
-    margin-top: 0.8rem;
+    margin-top: 0rem;
     background-color: #BC6366;
     color: #ffffff;
     padding: 0.8rem 1.5rem;
@@ -17,13 +17,14 @@ const But = styled.button`
         background-color: #67293E; /* Cor mais escura ao passar o mouse */
         cursor: pointer;
     }
-`
+`;
 
-const Button = ({text, width}) => {
-  
-  return (
-    <But width={width}>{text}</But>
-  )
-}
+const Button = ({ text, width, onClick }) => {
+    return (
+        <But width={width} onClick={onClick}>
+            {text}
+        </But>
+    );
+};
 
-export default Button
+export default Button;
