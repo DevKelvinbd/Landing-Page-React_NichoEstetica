@@ -193,8 +193,8 @@ const Paragraph = styled.p`
         height: auto;
         width: auto;
         right: -7%;
-        padding: 0 1rem 0 0;
-        font-size: clamp(18px, 10vw, 2vw);
+        padding: 1rem 1rem 1rem 0;
+        font-size: 1.8rem;
         margin-bottom: 0.7rem;
         line-height: 0.9;
     }
