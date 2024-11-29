@@ -1,6 +1,16 @@
 import styled from 'styled-components';
-import Flower from '../assets/images/iconFlower.svg'
-import Button from '../assets/Atoms/Button';
+import Bel from '../assets/images/Bel.png'
+import Fabio from '../assets/images/Fabio.png'
+import Erica from '../assets/images/Erika.jpg'
+
+import {
+    MDBCol,
+    MDBContainer,
+    MDBIcon,
+    MDBRow,
+    MDBTypography,
+  } from "mdb-react-ui-kit";
+
 
 // Breakpoints padrão recomendados para React
 const breakpoints = {
@@ -41,7 +51,7 @@ const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
     padding: 2rem 0;
     width: 100%;
     height: auto;
@@ -50,7 +60,7 @@ const Container = styled.div`
 
     /* Small devices (small tablets and large phones, 598px and 962px) */
     @media (min-width: ${breakpoints.sm}) and (max-width: ${breakpoints.md}) {
-        height: 100vh;
+        height: auto;
         width: 100%;
         justify-content: flex-start;
 
@@ -63,7 +73,7 @@ const Container = styled.div`
     
     /* Large devices (desktops, 1280px and up) */
     @media (min-width: ${breakpoints.lg}) and (max-width: ${breakpoints.xl}) {
-        height: 100vh;
+        height: auto;
     }
 
 `
@@ -206,141 +216,94 @@ const Paragraph = styled.p`
     }
 `
 
-const Caract = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: auto;
-    height: auto;
-    gap: 7px;
-    
-    @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
-        flex-direction: column;
-    }
-
-    /* Small devices (small tablets and large phones, 598px and 962px) */
-    @media (min-width: ${breakpoints.sm}) and (max-width: ${breakpoints.md}) {
-        align-items: flex-start;
-    }
-
-    /* Medium devices (tablets, 960px and up) */
-    @media (min-width: ${breakpoints.md}) and (max-width: ${breakpoints.lg}) {
-        align-items: flex-start;
-    }
-
-    /* Large devices (desktops, 1280px and up) */
-    @media (min-width: ${breakpoints.lg}) and (max-width: ${breakpoints.xl}) {
-        align-items: flex-start;
-    }
-`
-
-const ImgCaract = styled.img`
-    width: 2.2rem;
-    margin-bottom: 0rem; 
-`
-
-const TitleCaract = styled.h1`
-    font-family: 'Kalnia';
-    color: #BC6366;
-    margin: 0;
-`
-
-const ParCaract = styled.p`
-    color: #96485C;
-    text-align: center;
-    margin-top: 0.2rem;
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.1; /* Ajuste para o valor desejado */
-    font-size: 1.1rem;
-
-    /* Small devices (small tablets and large phones, 598px and 962px) */
-    @media (min-width: ${breakpoints.sm}) and (max-width: ${breakpoints.md}) {
-        text-align: left;
-    }
-
-    /* Medium devices (tablets, 960px and up) */
-    @media (min-width: ${breakpoints.md}) and (max-width: ${breakpoints.lg}) {
-        text-align: left;
-    }
-
-    /* Large devices (desktops, 1280px and up) */
-    @media (min-width: ${breakpoints.lg}) and (max-width: ${breakpoints.xl}) {
-        text-align: left;
-    }
-`
-
 const BrQl = styled.br`
 
 `
 
-const Block = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0.40rem;
+const Nome = styled.h5`
+    color: #67293E;
+`
 
-    /* Small devices (small tablets and large phones, 598px and 962px) */
-    @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
-        flex-direction: column;
-    }
+const InstaName = styled.h6`
+    color: #67293E;
+`
 
-    /* Small devices (small tablets and large phones, 598px and 962px) */
-    @media (min-width: ${breakpoints.sm}) and (max-width: ${breakpoints.md}) {
-        flex-direction: row;
-    }
-
-    /* Medium devices (tablets, 960px and up) */
-    @media (min-width: ${breakpoints.md}) and (max-width: ${breakpoints.lg}) {
-        flex-direction: row;
-    }
-
-    /* Large devices (desktops, 1280px and up) */
-    @media (min-width: ${breakpoints.lg}) and (max-width: ${breakpoints.xl}) {
-        flex-direction: row;
-    }
-
-
-
-` 
-const ContainerCaract = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    /* Small devices (small tablets and large phones, 598px and 962px) */
-    @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
-        flex-direction: column;
-    }
-    
-    /* Small devices (small tablets and large phones, 598px and 962px) */
-    @media (min-width: ${breakpoints.sm}) and (max-width: ${breakpoints.md}) {
-        flex-direction: row;
-    }
-
-    /* Medium devices (tablets, 960px and up) */
-    @media (min-width: ${breakpoints.md}) and (max-width: ${breakpoints.lg}) {
-        flex-direction: row;
-    }
-
-    /* Large devices (desktops, 1280px and up) */
-    @media (min-width: ${breakpoints.lg}) and (max-width: ${breakpoints.xl}) {
-        flex-direction: row;
-    }
-
-
+const ParagraphDepoimentos = styled.p`
+    color: #67293E;
 `
 
 const Section5 = () => {
   return (
     <Container>
         <ContentText>
-          <Paragraph style={{margin: "0", padding:"0"}}>Depoimentos</Paragraph>
-          <Title style={{padding: "0"}}>O que nossos<BrQl/>pacientes dizem?</Title>
-            
-           
+            <Paragraph style={{margin: "0", padding:"0"}}>Depoimentos</Paragraph>
+            <Title style={{padding: "0"}}>O que nossos<BrQl/>pacientes dizem?</Title>
         </ContentText>
+        
+            <MDBContainer className="py-5">
+                <MDBRow className="text-center">
+                    <MDBCol md="4" className="mb-5 mb-md-0">
+                    <div className="d-flex justify-content-center mb-4">
+                        <img
+                        src={Bel}
+                        className="rounded-circle shadow-1-strong"
+                        width="150"
+                        height="150"
+                        />
+                    </div>
+                    <Nome className="mb-1">Maria Isabel</Nome>
+                    <InstaName className="mb-2">@isabel_barros</InstaName>
+                    <ParagraphDepoimentos className="px-xl-3">
+                        Passar pelas mãos da Alice Barros foi uma experiência incrível! Além de super profissional, ela tem um cuidado único que faz toda a diferença.
+                    </ParagraphDepoimentos>
+                    <MDBTypography
+                        listUnStyled
+                        className="d-flex justify-content-center mb-0"
+                    >
+                    </MDBTypography>
+                    </MDBCol>
+                    <MDBCol md="4" className="mb-5 mb-md-0">
+                    <div className="d-flex justify-content-center mb-4">
+                        <img
+                        src={Fabio}
+                        className="rounded-circle shadow-1-strong"
+                        width="150"
+                        height="150"
+                        />
+                    </div>
+                    <Nome className="mb-1">Fábio Mendes</Nome>
+                    <InstaName className="mb-2">@fabiomendess</InstaName>
+                    <ParagraphDepoimentos className="px-xl-3">
+                        Não é apenas uma clínica, é um refúgio de bem-estar. Recebi um tratamento personalizado que deixou minha pele radiante. Com certeza, voltarei!
+                    </ParagraphDepoimentos>
+                    <MDBTypography
+                        listUnStyled
+                        className="d-flex justify-content-center mb-0"
+                    >
+                    </MDBTypography>
+                    </MDBCol>
+                    <MDBCol md="4" className="mb-5 mb-md-0">
+                    <div className="d-flex justify-content-center mb-4">
+                        <img
+                        src={Erica}
+                        className="rounded-circle shadow-1-strong"
+                        width="150"
+                        height="150"
+                        />
+                    </div>
+                    <Nome className="mb-1">Erica Barros</Nome>
+                    <InstaName className="mb-2">@ericashirley8547</InstaName>
+                    <ParagraphDepoimentos className="px-xl-3">
+                        Superou minhas expectativas! Os tratamentos são eficazes, e a equipe é extremamente qualificada. Mal posso esperar pela minha próxima visita.
+                    </ParagraphDepoimentos>
+                    <MDBTypography
+                        listUnStyled
+                        className="d-flex justify-content-center mb-0 p-0"
+                    >
+                    </MDBTypography>
+                    </MDBCol>
+                </MDBRow>
+            </MDBContainer>
 
     </Container>
   )
