@@ -52,7 +52,7 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 2rem 0;
+    padding: 1rem 0;
     width: 100%;
     height: auto;
     background-color: #EFDBDB;
