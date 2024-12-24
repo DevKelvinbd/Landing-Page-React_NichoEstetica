@@ -11,13 +11,13 @@ import FiosPdo from '../assets/images/Fiospdo.webp'
 
 // Breakpoints padrão recomendados
 const breakpoints = {
-  xs: '320px',
-  sm: '598px',
-  md: '962px',
-  lg: '1200px',
+  xs: '320px',         // Extra small devices (mobile phones, less than 600px)
+  sm: '598px',       // Small devices (small tablets and large phones, 598px and up)
+  md: '962px',       // Medium devices (tablets, 962px and up)
+  lg: '1200px',      // Large devices (desktops, 1200px and up)
   xl: '1920px',
+  xxl: '2560px'       // Extra large devices (large desktops and TVs, 1920px and up)
 };
-
 // Container principal
 const Container = styled.div`
   display: flex;
@@ -56,13 +56,13 @@ const ContainerBox = styled.div`
 
   /* Extra large devices (large desktops and TVs, 1920px and up) */
   @media (min-width: ${breakpoints.xl}) {
-  
+    
   }
 `;
 
 // Título principal
 const Title = styled.h1`
-  font-size: 2.3rem;
+    font-size: 2.3rem;
     color: #96485C; 
     font-family: 'Kalnia';
     margin: 0;
@@ -98,6 +98,14 @@ const Title = styled.h1`
 
     /* Large devices (desktops, 1280px and up) */
     @media (min-width: ${breakpoints.lg}) and (max-width: ${breakpoints.xl}) {
+        height: auto;
+        width: auto;
+        font-size: clamp(45px, 15vw, 4.5vw);
+        margin-bottom: 2rem;
+        line-height: 0.9;
+    }
+
+    @media (min-width: ${breakpoints.xl}) and (max-width: ${breakpoints.xxl}) {
         height: auto;
         width: auto;
         font-size: clamp(45px, 15vw, 4.5vw);
@@ -142,6 +150,9 @@ const TreatmentBox = styled.div`
 
   /* Extra large devices (large desktops and TVs, 1920px and up) */
   @media (min-width: ${breakpoints.xl}) {
+    max-width: 700px;
+    height: 550px; /* Altura fixa */
+
 
   }
 `;
@@ -163,6 +174,10 @@ const TitleBox = styled.h2`
   font-size: 1.5rem;
   margin: 1rem 0 0.5rem 0;
   text-align: center;
+
+  @media (min-width: ${breakpoints.xl}) {
+    font-size: 3.1rem;
+  }
 `;
 
 // Descrição do tratamento
@@ -196,7 +211,7 @@ const ParagraphBox = styled.p`
 
   /* Extra large devices (large desktops and TVs, 1920px and up) */
   @media (min-width: ${breakpoints.xl}) {
-  
+    font-size: 1.95rem;
   }
 `;
 

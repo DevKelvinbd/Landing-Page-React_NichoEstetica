@@ -12,11 +12,12 @@ import Button from '../assets/Atoms/Button';
 
 // Breakpoints padrão recomendados
 const breakpoints = {
-  xs: '320px',
-  sm: '598px',
-  md: '962px',
-  lg: '1200px',
+  xs: '320px',         // Extra small devices (mobile phones, less than 600px)
+  sm: '598px',       // Small devices (small tablets and large phones, 598px and up)
+  md: '962px',       // Medium devices (tablets, 962px and up)
+  lg: '1200px',      // Large devices (desktops, 1200px and up)
   xl: '1920px',
+  xxl: '2560px'       // Extra large devices (large desktops and TVs, 1920px and up)
 };
 
 // Container principal
@@ -73,6 +74,14 @@ const Title = styled.h1`
   }
 
   @media (min-width: ${breakpoints.lg}) and (max-width: ${breakpoints.xl}) {
+    height: auto;
+    width: auto;
+    font-size: clamp(45px, 15vw, 4.5vw);
+    margin-bottom: 2rem;
+    line-height: 0.9;
+  }
+
+    @media (min-width: ${breakpoints.xl}) and (max-width: ${breakpoints.xxl}) {
     height: auto;
     width: auto;
     font-size: clamp(45px, 15vw, 4.5vw);

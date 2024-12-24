@@ -8,34 +8,9 @@ const breakpoints = {
     sm: '598px',       // Small devices (small tablets and large phones, 598px and up)
     md: '962px',       // Medium devices (tablets, 962px and up)
     lg: '1200px',      // Large devices (desktops, 1200px and up)
-    xl: '1920px'       // Extra large devices (large desktops and TVs, 1920px and up)
+    xl: '1920px',
+    xxl: '2560px'       // Extra large devices (large desktops and TVs, 1920px and up)
 };
-
-//   @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
-
-
-//   }
-
-//   /* Small devices (small tablets and large phones, 598px and 962px) */
-//   @media (min-width: ${breakpoints.sm}) and (max-width: ${breakpoints.md}) {
-  
-//   }
-
-//   /* Medium devices (tablets, 960px and up) */
-//   @media (min-width: ${breakpoints.md}) and (max-width: ${breakpoints.lg}) {
-      
-//   }
-
-//   /* Large devices (desktops, 1280px and up) */
-//   @media (min-width: ${breakpoints.lg}) and (max-width: ${breakpoints.xl}) {
-  
-//   }
-
-//   /* Extra large devices (large desktops and TVs, 1920px and up) */
-//   @media (min-width: ${breakpoints.xl}) {
-  
-//   }
-
 
 const Container = styled.div`
     display: flex;
@@ -66,6 +41,9 @@ const Container = styled.div`
         height: 100vh;
     }
 
+    @media (min-width: ${breakpoints.xl}) and (max-width: ${breakpoints.xxl}) {
+        height: 100vh;
+    }
 `
 
 const ContentText = styled.div`
@@ -101,6 +79,13 @@ const ContentText = styled.div`
 
     /* Large devices (desktops, 1280px and up) */
     @media (min-width: ${breakpoints.lg}) and (max-width: ${breakpoints.xl}) {
+        width: 100%;
+        padding: 2rem 10%;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    @media (min-width: ${breakpoints.xl}) and (max-width: ${breakpoints.xxl}) {
         width: 100%;
         padding: 2rem 10%;
         align-items: flex-start;
@@ -154,6 +139,15 @@ const Title = styled.h1`
         margin-bottom: 0.7rem;
         line-height: 0.9;
     }
+
+     @media (min-width: ${breakpoints.xl}) and (max-width: ${breakpoints.xxl}) {
+        height: auto;
+        width: auto;
+        padding: 0 1rem 0 0;
+        font-size: clamp(45px, 15vw, 4.5vw);
+        margin-bottom: 0.7rem;
+        line-height: 0.9;
+    }
 `
 
 const Paragraph = styled.p`
@@ -162,15 +156,15 @@ const Paragraph = styled.p`
     margin-top: 0.5rem;
     font-family: 'Poppins', sans-serif;
     line-height: 1.1; /* Ajuste para o valor desejado */
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     
     @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
         height: auto;
         width: auto;
-        font-size: 1.1rem;
         padding: 0;
         margin-top: 0.5rem;
-        line-height: 0.9;
+        font-size: 1.11rem;
+        line-height: 1.3;
     }
 
     /* Small devices (small tablets and large phones, 598px and 962px) */
@@ -179,9 +173,9 @@ const Paragraph = styled.p`
         width: auto;
         text-align: left;
         padding: 0 1rem 0 0;
-        font-size: clamp(18px, 10vw, 2vw);
+        font-size: 1.6rem;
         margin-bottom: 0.7rem;
-        line-height: 0.9;
+        line-height: 1.2;
     }
 
     /* Medium devices (tablets, 960px and up) */
@@ -190,9 +184,9 @@ const Paragraph = styled.p`
         width: auto;
         text-align: left;
         padding: 0 1rem 0 0;
-        font-size: clamp(18px, 10vw, 2vw);
+        font-size: 1.6rem;
         margin-bottom: 0.7rem;
-        line-height: 0.9;
+        line-height: 1.2;
     }
 
     /* Large devices (desktops, 1280px and up) */
@@ -201,9 +195,19 @@ const Paragraph = styled.p`
         width: auto;
         text-align: left;
         padding: 0 6rem 0 0;
-        font-size: clamp(18px, 10vw, 1.5vw);
         margin-bottom: 0.7rem;
-        line-height: 0.9;
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
+
+    @media (min-width: ${breakpoints.xl}) and (max-width: ${breakpoints.xxl}) {
+        height: auto;
+        width: auto;
+        text-align: left;
+        padding: 0 6rem 0 0;
+        margin-bottom: 0.7rem;
+        font-size: 3rem;
+        line-height: 1.2;
     }
 `
 
@@ -234,6 +238,10 @@ const Caract = styled.div`
     @media (min-width: ${breakpoints.lg}) and (max-width: ${breakpoints.xl}) {
         align-items: flex-start;
     }
+
+    @media (min-width: ${breakpoints.xl}) and (max-width: ${breakpoints.xxl}) {
+        align-items: flex-start;
+    }
 `
 
 const ImgCaract = styled.img`
@@ -245,6 +253,30 @@ const TitleCaract = styled.h1`
     font-family: 'Kalnia';
     color: #BC6366;
     margin: 0;
+
+    @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
+        font-size: 2rem;
+    }
+
+    /* Small devices (small tablets and large phones, 598px and 962px) */
+    @media (min-width: ${breakpoints.sm}) and (max-width: ${breakpoints.md}) {
+        font-size: 2rem;
+    }
+
+    /* Medium devices (tablets, 960px and up) */
+    @media (min-width: ${breakpoints.md}) and (max-width: ${breakpoints.lg}) {
+        font-size: 2rem;
+    }
+
+    /* Large devices (desktops, 1280px and up) */
+    @media (min-width: ${breakpoints.lg}) and (max-width: ${breakpoints.xl}) {
+        font-size: 2rem;
+    }
+
+    @media (min-width: ${breakpoints.xl}) and (max-width: ${breakpoints.xxl}) {
+        font-size: 5rem;
+    }
+
 `
 
 const ParCaract = styled.p`
@@ -253,21 +285,30 @@ const ParCaract = styled.p`
     margin-top: 0.2rem;
     font-family: 'Poppins', sans-serif;
     line-height: 1.1; /* Ajuste para o valor desejado */
-    font-size: 1.1rem;
+    font-size: 1.4rem;
 
     /* Small devices (small tablets and large phones, 598px and 962px) */
     @media (min-width: ${breakpoints.sm}) and (max-width: ${breakpoints.md}) {
         text-align: left;
+        font-size: 1rem;
     }
 
     /* Medium devices (tablets, 960px and up) */
     @media (min-width: ${breakpoints.md}) and (max-width: ${breakpoints.lg}) {
         text-align: left;
+        font-size: 1.3rem;
     }
 
     /* Large devices (desktops, 1280px and up) */
     @media (min-width: ${breakpoints.lg}) and (max-width: ${breakpoints.xl}) {
         text-align: left;
+        font-size: 1.6rem;
+    }
+
+    @media (min-width: ${breakpoints.xl}) and (max-width: ${breakpoints.xxl}) {
+        text-align: left;
+        line-height: 1.1; /* Ajuste para o valor desejado */
+        font-size: 2.5rem;
     }
 `
 
@@ -302,7 +343,9 @@ const Block = styled.div`
         flex-direction: row;
     }
 
-
+    @media (min-width: ${breakpoints.xl}) and (max-width: ${breakpoints.xxl}) {
+        flex-direction: row;
+    }
 
 ` 
 const ContainerCaract = styled.div`
@@ -327,6 +370,10 @@ const ContainerCaract = styled.div`
 
     /* Large devices (desktops, 1280px and up) */
     @media (min-width: ${breakpoints.lg}) and (max-width: ${breakpoints.xl}) {
+        flex-direction: row;
+    }
+
+    @media (min-width: ${breakpoints.xl}) and (max-width: ${breakpoints.xxl}) {
         flex-direction: row;
     }
 

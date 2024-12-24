@@ -9,32 +9,10 @@ const breakpoints = {
     sm: '598px',       // Small devices (small tablets and large phones, 598px and up)
     md: '962px',       // Medium devices (tablets, 962px and up)
     lg: '1200px',      // Large devices (desktops, 1200px and up)
-    xl: '1920px'       // Extra large devices (large desktops and TVs, 1920px and up)
+    xl: '1920px',
+    xxl: '2560px'       // Extra large devices (large desktops and TVs, 1920px and up)
+           // Extra large devices (large desktops and TVs, 1920px and up)
 };
-
-//   @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
-
-//   }
-
-//   /* Small devices (small tablets and large phones, 598px and 962px) */
-//   @media (min-width: ${breakpoints.sm}) and (max-width: ${breakpoints.md}) {
-  
-//   }
-
-//   /* Medium devices (tablets, 960px and up) */
-//   @media (min-width: ${breakpoints.md}) and (max-width: ${breakpoints.lg}) {
-      
-//   }
-
-//   /* Large devices (desktops, 1280px and up) */
-//   @media (min-width: ${breakpoints.lg}) and (max-width: ${breakpoints.xl}) {
-  
-//   }
-
-//   /* Extra large devices (large desktops and TVs, 1920px and up) */
-//   @media (min-width: ${breakpoints.xl}) {
-  
-//   }
 
 
 const Container = styled.div`
@@ -64,6 +42,11 @@ const Container = styled.div`
 
     /* Large devices (desktops, 1280px and up) */
     @media (min-width: ${breakpoints.lg}) and (max-width: ${breakpoints.xl}) {
+        height: 100vh;
+    }
+
+            /* Large devices (desktops, 1280px and up) */
+    @media (min-width: ${breakpoints.xl}) and (max-width: ${breakpoints.xxl}) {
         height: 100vh;
     }
 
@@ -99,6 +82,11 @@ const ContentText = styled.div`
 
     /* Large devices (desktops, 1280px and up) */
     @media (min-width: ${breakpoints.lg}) and (max-width: ${breakpoints.xl}) {
+        width: 60%;
+        padding-left: 10%;
+    }
+
+        @media (min-width: ${breakpoints.xl}) and (max-width: ${breakpoints.xxl}) {
         width: 60%;
         padding-left: 10%;
     }
@@ -149,6 +137,15 @@ const Title = styled.h1`
         line-height: 0.9;
     }
 
+
+    @media (min-width: ${breakpoints.xl}) and (max-width: ${breakpoints.xxl}) {
+        height: auto;
+        width: auto;
+        padding: 0 1rem 0 0;
+        font-size: 9rem;
+        margin-bottom: 0rem;
+        line-height: 0.9;
+    }
 `
 
 const Paragraph = styled.p`
@@ -157,14 +154,14 @@ const Paragraph = styled.p`
     margin: 0;
     font-family: 'Poppins', sans-serif;
     margin-top: 0.5rem;
-    line-height: 1.1; /* Ajuste para o valor desejado */
+    line-height: 1.2; /* Ajuste para o valor desejado */
     
     @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
         height: auto;
         width: auto;
         font-size: 1rem;
         padding: 0 1.5rem 0 0;
-        line-height: 0.9;
+        line-height: 1.2;
     }
 
     /* Small devices (small tablets and large phones, 598px and 962px) */
@@ -174,7 +171,7 @@ const Paragraph = styled.p`
         padding: 0 1rem 0 0;
         font-size: clamp(18px, 10vw, 2vw);
         margin-bottom: 0.7rem;
-        line-height: 0.9;
+        line-height: 1.2;
     }
 
     /* Medium devices (tablets, 960px and up) */
@@ -185,7 +182,7 @@ const Paragraph = styled.p`
         padding: 0 1rem 0 0;
         font-size: clamp(18px, 10vw, 2vw);
         margin-bottom: 0.7rem;
-        line-height: 0.9;
+        line-height: 1.2;
     }
 
     /* Large devices (desktops, 1280px and up) */
@@ -196,7 +193,17 @@ const Paragraph = styled.p`
         padding: 1rem 1rem 1rem 0;
         font-size: 1.8rem;
         margin-bottom: 0.7rem;
-        line-height: 0.9;
+        line-height: 1.2;
+    }
+
+        @media (min-width: ${breakpoints.xl}) and (max-width: ${breakpoints.xxl}) {
+        height: auto;
+        width: auto;
+        right: -7%;
+        padding: 1rem 1rem 1rem 0;
+        font-size: 3rem;
+        margin-bottom: 0.7rem;
+        line-height: 1.2;
     }
 `
 
@@ -228,6 +235,10 @@ const ImagemS1 = styled.img`
 
         /* Large devices (desktops, 1280px and up) */
     @media (min-width: ${breakpoints.lg}) and (max-width: ${breakpoints.xl}) {
+        display: none;
+    }
+
+    @media (min-width: ${breakpoints.xl}) and (max-width: ${breakpoints.xxl}) {
         display: none;
     }
 `
@@ -262,6 +273,12 @@ const Imagem2S1 = styled.img`
     @media (min-width: ${breakpoints.lg}) and (max-width: ${breakpoints.xl}) {
         display: flex;
         max-height: 90%;
+        width: auto;
+    }
+
+    @media (min-width: ${breakpoints.xl}) and (max-width: ${breakpoints.xxl}) {
+        display: flex;
+        height: 70%;
         width: auto;
     }
 `
